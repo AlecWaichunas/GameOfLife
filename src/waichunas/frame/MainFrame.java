@@ -1,5 +1,6 @@
 package waichunas.frame;
 
+import waichunas.frame.events.FrameEvents;
 import waichunas.frame.screen.MainScreen;
 
 import java.awt.*;

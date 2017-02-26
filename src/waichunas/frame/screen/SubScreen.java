@@ -7,12 +7,16 @@ import java.awt.*;
  */
 public abstract class SubScreen {
 
-    private String name;
-    private Dimension size;
-    
+    protected String name;
+    protected Dimension size;
+
+    public SubScreen(Dimension size){
+        this.name = name;
+        this.size = size;
+    }
 
     public abstract void click(int x, int y);
     public abstract void update();
-    public abstract void render();
+    public abstract void render(Graphics g);
 
 }

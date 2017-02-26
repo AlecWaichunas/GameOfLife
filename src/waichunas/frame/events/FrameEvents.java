@@ -1,4 +1,4 @@
-package waichunas.frame;
+package waichunas.frame.events;
 
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;

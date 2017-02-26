@@ -8,16 +8,19 @@ import java.awt.image.BufferStrategy;
  */
 public class MainScreen extends Canvas {
 
+    private SubScreen screen;
     private Dimension size;
 
     public MainScreen(int width, int height){
         size = new Dimension(width, height);
         setPreferredSize(size);
         setMinimumSize(size);
+
+        screen = new TestScreen(size);
     }
 
     public void update(){
-
+        screen.update();
     }
 
     public void render(){
@@ -34,6 +37,7 @@ public class MainScreen extends Canvas {
         g.fillRect(0, 0, size.width, size.height);
         g.setColor(Color.WHITE);
         g.fillRect(0, 0, 100, 100);
+        screen.render(g);
 
         bs.show();//show the buffer
         bs.dispose();//empty it from memory
